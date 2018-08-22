@@ -275,7 +275,7 @@ def main(MAX_PAGE):
 
     # get_page_suzhou()
     for i in range(0, MAX_PAGE):
-        html = get_page_wuxi(i)
+        html = get_page_suzhou(i)
         # ------------ 解析数据 ---------------
         parse_suzhou(html)
         print('-' * 100)
@@ -283,7 +283,7 @@ def main(MAX_PAGE):
 
     # get_page_shanghai()
     for i in range(0, MAX_PAGE):
-        html = get_page_wuxi(i)
+        html = get_page_shanghai(i)
         # ------------ 解析数据 ---------------
         parse_shanghai(html)
         print('-' * 100)
@@ -292,6 +292,5 @@ def main(MAX_PAGE):
 
 if __name__ == '__main__':
     # 最大爬取页数
-    main(MAX_PAGE=3000)
+    main(MAX_PAGE=2000)
     # 每页一秒间隔时间，防止被封ip
-    time.sleep(1)
